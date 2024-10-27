@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherScope Pro</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="header animate__animated animate__fadeIn">
+            <h1 class="logo">WeatherScope Pro</h1>
+            <div class="unit-toggle">
+                <button class="unit-btn active" data-unit="celsius">°C</button>
+                <button class="unit-btn" data-unit="fahrenheit">°F</button>
+            </div>
+        </header>
+
+        <section class="search-section animate__animated animate__fadeIn">
+            <div class="search-container">
+                <input type="text" class="search-input" id="cityInput" placeholder="Enter city name or coordinates...">
+                <button class="search-btn" onclick="getWeather()">
+                    <i class="fas fa-search"></i> Search
+                </button>
+            </div>
+            <div class="quick-links">
+                <span class="quick-link" onclick="useCurrentLocation()">
+                    <i class="fas fa-location-arrow"></i> Current Location
+                </span>
+            </div>
+            <div class="saved-locations" id="savedLocations"></div>
+        </section>
+
+        <div class="error-message" id="errorMessage"></div>
+        <div class="success-message" id="successMessage"></div>
+        <div class="weather-alert" id="weatherAlert"></div>
+
+        <div class="weather-grid animate__animated animate__fadeIn">
+            <div class="weather-card main-weather">
+                <h2 class="city-name" id="cityName">--</h2>
+                <div class="date-time" id="dateTime">--</div>
+                <div class="weather-icon" id="weatherIcon">
+                    <i class="fas fa-cloud"></i>
+                </div>
+                <div class="temperature-display" id="temperature">--°</div>
+                <div class="weather-description" id="weatherDescription">--</div>
+                
+                <div class="weather-stats">
+                    <div class="stat-item">
+                        <i class="fas fa-tint stat-icon"></i>
+                        <div>
+                            <div>Humidity</div>
+                            <div id="humidity">--%</div>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-wind stat-icon"></i>
+                        <div>
+                            <div>Wind Speed</div>
+                            <div id="windSpeed">-- km/h</div>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-compress-arrows-alt stat-icon"></i>
+                        <div>
+                            <div>Pressure</div>
+                            <div id="pressure">-- hPa</div>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-sun stat-icon"></i>
+                        <div>
+                            <div>UV Index</div>
+                            <div id="uvIndex">--</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="weather-card forecast-section">
+                <h3 class="forecast-title">5-Day Forecast</h3>
+                <div class="forecast-grid" id="forecast"></div>
+            </div>
+        </div>
+
+        <div class="air-quality-section animate__animated animate__fadeIn">
+            <h3>Air Quality Index</h3>
+            <div class="aqi-gauge" id="aqiGauge"></div>
+            <div id="aqiDescription">Loading air quality data...</div>
+        </div>
+    </div>
+
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loader"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
