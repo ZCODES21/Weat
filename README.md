@@ -2,7 +2,7 @@
 
 WeatherScope Pro is a user-friendly weather application that provides real-time weather updates, forecasts, and air quality information based on user input or current location. 
 
-![Demo](URL-to-image)
+![Demo](IMG_20241027_132610.jpg)
 
 ## Features
 
