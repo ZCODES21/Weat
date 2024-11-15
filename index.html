@@ -11,26 +11,26 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-gradient-to-r from-indigo-50 via-teal-50 to-green-100 font-sans leading-relaxed">
+<body class="bg-gray-50 font-sans leading-relaxed">
 
-    <div class="max-w-6xl mx-auto px-6 py-8">
+    <div class="max-w-6xl mx-auto px-4 py-8">
         <header class="flex justify-between items-center animate__animated animate__fadeIn mb-8">
-            <h1 class="text-3xl font-bold text-teal-700">WeatherScope Pro</h1>
+            <h1 class="text-3xl font-bold text-gray-800">WeatherScope Pro</h1>
             <div class="flex space-x-2">
-                <button class="unit-btn px-4 py-2 bg-teal-600 text-white rounded-lg shadow hover:bg-teal-700 active" data-unit="celsius">°C</button>
-                <button class="unit-btn px-4 py-2 bg-gray-300 text-gray-700 rounded-lg shadow hover:bg-gray-400" data-unit="fahrenheit">°F</button>
+                <button class="unit-btn px-4 py-2 bg-blue-500 text-white rounded-lg shadow active" data-unit="celsius">°C</button>
+                <button class="unit-btn px-4 py-2 bg-gray-300 text-gray-700 rounded-lg shadow" data-unit="fahrenheit">°F</button>
             </div>
         </header>
 
         <section class="search-section mb-8 animate__animated animate__fadeIn">
             <div class="flex items-center space-x-4 mb-4">
-                <input type="text" id="cityInput" placeholder="Enter city name or coordinates..." class="w-full p-3 border-2 border-teal-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" aria-label="Search for city or coordinates">
-                <button class="search-btn px-6 py-3 bg-teal-600 text-white rounded-lg shadow hover:bg-teal-700" onclick="getWeather()" aria-label="Search weather">
+                <input type="text" id="cityInput" placeholder="Enter city name or coordinates..." class="w-full p-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Search for city or coordinates">
+                <button class="search-btn px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700" onclick="getWeather()" aria-label="Search weather">
                     <i class="fas fa-search"></i> Search
                 </button>
             </div>
             <div class="quick-links">
-                <span class="quick-link text-teal-600 cursor-pointer hover:underline" onclick="useCurrentLocation()" aria-label="Use current location">
+                <span class="quick-link text-blue-600 cursor-pointer hover:underline" onclick="useCurrentLocation()" aria-label="Use current location">
                     <i class="fas fa-location-arrow"></i> Current Location
                 </span>
             </div>
@@ -43,17 +43,17 @@
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 animate__animated animate__fadeIn">
             <div class="weather-card bg-white p-6 rounded-lg shadow-lg">
-                <h2 class="city-name text-2xl font-semibold text-teal-700" id="cityName">--</h2>
+                <h2 class="city-name text-2xl font-semibold text-gray-800" id="cityName">--</h2>
                 <div class="text-gray-500 text-sm" id="dateTime">--</div>
-                <div class="weather-icon my-4 text-5xl text-teal-600" id="weatherIcon">
+                <div class="weather-icon my-4 text-5xl" id="weatherIcon">
                     <i class="fas fa-cloud"></i>
                 </div>
-                <div class="temperature-display text-4xl font-bold text-teal-800" id="temperature">--°</div>
+                <div class="temperature-display text-4xl font-bold text-gray-800" id="temperature">--°</div>
                 <div class="weather-description text-lg text-gray-600" id="weatherDescription">--</div>
 
                 <div class="weather-stats mt-6 grid grid-cols-2 gap-4">
                     <div class="stat-item flex items-center space-x-2">
-                        <i class="fas fa-tint text-teal-500 text-xl"></i>
+                        <i class="fas fa-tint text-blue-500 text-xl"></i>
                         <div>
                             <div class="text-sm">Humidity</div>
                             <div id="humidity" class="font-semibold">--%</div>
@@ -84,20 +84,20 @@
             </div>
 
             <div class="weather-card forecast-section bg-white p-6 rounded-lg shadow-lg">
-                <h3 class="forecast-title text-2xl font-semibold text-teal-700 mb-4">5-Day Forecast</h3>
+                <h3 class="forecast-title text-2xl font-semibold text-gray-800 mb-4">5-Day Forecast</h3>
                 <div class="forecast-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="forecast"></div>
             </div>
         </div>
 
         <div class="air-quality-section bg-white p-6 rounded-lg shadow-lg animate__animated animate__fadeIn">
-            <h3 class="text-2xl font-semibold text-teal-700 mb-4">Air Quality Index</h3>
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Air Quality Index</h3>
             <div class="aqi-gauge mb-4" id="aqiGauge"></div>
             <div id="aqiDescription" class="text-gray-600">Loading air quality data...</div>
         </div>
     </div>
 
     <div class="loading-overlay fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center" id="loadingOverlay">
-        <div class="loader border-4 border-t-4 border-teal-500 rounded-full w-16 h-16 animate-spin"></div>
+        <div class="loader border-4 border-t-4 border-blue-500 rounded-full w-16 h-16 animate-spin"></div>
     </div>
 
     <script src="script.js"></script>
