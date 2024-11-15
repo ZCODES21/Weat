@@ -1,105 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WeatherScope Pro - A comprehensive weather application providing accurate forecasts and air quality data.">
     <title>WeatherScope Pro</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
-<body class="bg-gray-50 font-sans leading-relaxed">
-
-    <div class="max-w-4xl mx-auto px-6 py-8">
-        <header class="flex justify-between items-center mb-6">
-            <h1 class="text-3xl font-bold text-gray-800">WeatherScope Pro</h1>
-            <div class="flex space-x-2">
-                <button class="unit-btn px-4 py-2 bg-blue-500 text-white rounded-lg shadow-sm" data-unit="celsius">°C</button>
-                <button class="unit-btn px-4 py-2 bg-gray-300 text-gray-700 rounded-lg shadow-sm" data-unit="fahrenheit">°F</button>
+<body>
+    <div class="app-container">
+        <header class="header animate__animated animate__fadeIn">
+            <h1 class="logo">WeatherScope Pro</h1>
+            <div class="unit-toggle">
+                <button class="unit-btn active" data-unit="celsius">°C</button>
+                <button class="unit-btn" data-unit="fahrenheit">°F</button>
             </div>
         </header>
 
-        <section class="mb-8">
-            <div class="flex items-center space-x-4 mb-4">
-                <input type="text" id="cityInput" placeholder="Enter city or coordinates..." class="w-full p-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Search for city or coordinates">
-                <button class="search-btn px-6 py-3 bg-blue-600 text-white rounded-lg shadow-sm hover:bg-blue-700" onclick="getWeather()" aria-label="Search weather">
+        <section class="search-section animate__animated animate__fadeIn">
+            <div class="search-container">
+                <input type="text" class="search-input" id="cityInput" placeholder="Enter city name or coordinates...">
+                <button class="search-btn" onclick="getWeather()">
                     <i class="fas fa-search"></i> Search
                 </button>
             </div>
-            <div class="text-center">
-                <span class="text-blue-600 cursor-pointer hover:underline" onclick="useCurrentLocation()">
-                    <i class="fas fa-location-arrow"></i> Use Current Location
+            <div class="quick-links">
+                <span class="quick-link" onclick="useCurrentLocation()">
+                    <i class="fas fa-location-arrow"></i> Current Location
                 </span>
             </div>
+            <div class="saved-locations" id="savedLocations"></div>
         </section>
 
-        <div class="text-center text-red-500" id="errorMessage"></div>
-        <div class="text-center text-green-500" id="successMessage"></div>
-        <div class="text-center text-yellow-500" id="weatherAlert"></div>
+        <div class="error-message" id="errorMessage"></div>
+        <div class="success-message" id="successMessage"></div>
+        <div class="weather-alert" id="weatherAlert"></div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-            <div class="weather-card bg-white p-6 rounded-lg shadow-md">
-                <h2 class="city-name text-2xl font-semibold text-gray-800" id="cityName">--</h2>
-                <div class="text-gray-500 text-sm" id="dateTime">--</div>
-                <div class="weather-icon my-4 text-5xl" id="weatherIcon">
+        <div class="weather-grid animate__animated animate__fadeIn">
+            <div class="weather-card main-weather">
+                <h2 class="city-name" id="cityName">--</h2>
+                <div class="date-time" id="dateTime">--</div>
+                <div class="weather-icon" id="weatherIcon">
                     <i class="fas fa-cloud"></i>
                 </div>
-                <div class="temperature-display text-4xl font-bold text-gray-800" id="temperature">--°</div>
-                <div class="weather-description text-lg text-gray-600" id="weatherDescription">--</div>
-
-                <div class="weather-stats mt-6 grid grid-cols-2 gap-4">
-                    <div class="stat-item flex items-center space-x-2">
-                        <i class="fas fa-tint text-blue-500 text-xl"></i>
+                <div class="temperature-display" id="temperature">--°</div>
+                <div class="weather-description" id="weatherDescription">--</div>
+                
+                <div class="weather-stats">
+                    <div class="stat-item">
+                        <i class="fas fa-tint stat-icon"></i>
                         <div>
-                            <div class="text-sm">Humidity</div>
-                            <div id="humidity" class="font-semibold">--%</div>
+                            <div>Humidity</div>
+                            <div id="humidity">--%</div>
                         </div>
                     </div>
-                    <div class="stat-item flex items-center space-x-2">
-                        <i class="fas fa-wind text-green-500 text-xl"></i>
+                    <div class="stat-item">
+                        <i class="fas fa-wind stat-icon"></i>
                         <div>
-                            <div class="text-sm">Wind Speed</div>
-                            <div id="windSpeed" class="font-semibold">-- km/h</div>
+                            <div>Wind Speed</div>
+                            <div id="windSpeed">-- km/h</div>
                         </div>
                     </div>
-                    <div class="stat-item flex items-center space-x-2">
-                        <i class="fas fa-compress-arrows-alt text-gray-600 text-xl"></i>
+                    <div class="stat-item">
+                        <i class="fas fa-compress-arrows-alt stat-icon"></i>
                         <div>
-                            <div class="text-sm">Pressure</div>
-                            <div id="pressure" class="font-semibold">-- hPa</div>
+                            <div>Pressure</div>
+                            <div id="pressure">-- hPa</div>
                         </div>
                     </div>
-                    <div class="stat-item flex items-center space-x-2">
-                        <i class="fas fa-sun text-yellow-500 text-xl"></i>
+                    <div class="stat-item">
+                        <i class="fas fa-sun stat-icon"></i>
                         <div>
-                            <div class="text-sm">UV Index</div>
-                            <div id="uvIndex" class="font-semibold">--</div>
+                            <div>UV Index</div>
+                            <div id="uvIndex">--</div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="weather-card bg-white p-6 rounded-lg shadow-md">
-                <h3 class="forecast-title text-2xl font-semibold text-gray-800 mb-4">5-Day Forecast</h3>
-                <div class="forecast-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="forecast"></div>
+            <div class="weather-card forecast-section">
+                <h3 class="forecast-title">5-Day Forecast</h3>
+                <div class="forecast-grid" id="forecast"></div>
             </div>
         </div>
 
-        <div class="air-quality-section bg-white p-6 rounded-lg shadow-md">
-            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Air Quality Index</h3>
-            <div class="aqi-gauge mb-4" id="aqiGauge"></div>
-            <div id="aqiDescription" class="text-gray-600">Loading air quality data...</div>
+        <div class="air-quality-section animate__animated animate__fadeIn">
+            <h3>Air Quality Index</h3>
+            <div class="aqi-gauge" id="aqiGauge"></div>
+            <div id="aqiDescription">Loading air quality data...</div>
         </div>
     </div>
 
-    <div class="loading-overlay fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center" id="loadingOverlay">
-        <div class="loader border-4 border-t-4 border-gray-600 rounded-full w-16 h-16 animate-spin"></div>
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loader"></div>
     </div>
 
     <script src="script.js"></script>
 </body>
-
 </html>
