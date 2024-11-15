@@ -1,1 +1,355 @@
-const _0x5cacd9=_0x554c;(function(_0x126e3d,_0x69d0b){const _0x4e74f1=_0x554c,_0xbbfbd0=_0x126e3d();while(!![]){try{const _0x2a12de=parseInt(_0x4e74f1(0x125))/(0x123a+0x2548+-0x3781)*(parseInt(_0x4e74f1(0x11f))/(-0xc39*0x3+0x1bf+0x22ee))+-parseInt(_0x4e74f1(0x21c))/(0x1c7f+0x1deb+-0x3a67)*(parseInt(_0x4e74f1(0x185))/(0x9e*-0x7+-0x182e+0x1c84))+parseInt(_0x4e74f1(0x1bb))/(0xa29+-0x240d+0x19e9)*(-parseInt(_0x4e74f1(0x1d1))/(0x1*0x22b7+0x22a2+-0x4553))+-parseInt(_0x4e74f1(0x212))/(-0x25d3+0x34f+-0x228b*-0x1)+-parseInt(_0x4e74f1(0x276))/(0xa27*-0x2+0xa7*-0x1d+0x2741*0x1)*(-parseInt(_0x4e74f1(0x1e0))/(-0x242*-0x1+0x1a2a*-0x1+0x17f1))+parseInt(_0x4e74f1(0x10d))/(0xf1d+-0x1c35+0x52*0x29)*(-parseInt(_0x4e74f1(0x150))/(0x32*0xc1+0xf67+-0x350e))+parseInt(_0x4e74f1(0x1e9))/(0xedc+0x21f+-0x10ef)*(parseInt(_0x4e74f1(0x13a))/(0x3*-0x20b+0x1d11+0x3f*-0x5d));if(_0x2a12de===_0x69d0b)break;else _0xbbfbd0['push'](_0xbbfbd0['shift']());}catch(_0x5beb45){_0xbbfbd0['push'](_0xbbfbd0['shift']());}}}(_0x23c1,0x4f16f+-0x1e7fc+0x4d5*0x26));const API_KEY=_0x5cacd9(0x190)+_0x5cacd9(0x233)+_0x5cacd9(0x11c)+'14';let currentUnit=_0x5cacd9(0x16c),savedLocations=JSON[_0x5cacd9(0x141)](localStorage[_0x5cacd9(0x1da)](_0x5cacd9(0x168)+_0x5cacd9(0x149)))||[];function showLoading(_0x337ca2){const _0x1534e3=_0x5cacd9,_0x35c22d={'nfdbA':_0x1534e3(0x153)+_0x1534e3(0x135),'lNPTg':_0x1534e3(0x1d8),'mtHlq':_0x1534e3(0x211)};document[_0x1534e3(0x1bc)+_0x1534e3(0x17d)](_0x35c22d[_0x1534e3(0x23f)])[_0x1534e3(0x17b)][_0x1534e3(0x20a)]=_0x337ca2?_0x35c22d[_0x1534e3(0x11e)]:_0x35c22d[_0x1534e3(0xf7)];}function showError(_0x575160){const _0x2f4714=_0x5cacd9,_0x57e4f7={'NxVzU':_0x2f4714(0x14a)+'ge','PjeiA':_0x2f4714(0x243),'QMuOl':_0x2f4714(0x211),'UJHyk':_0x2f4714(0x22d)+_0x2f4714(0x242),'BudqH':_0x2f4714(0x15d)+_0x2f4714(0x1ac),'ULjxT':function(_0x4b10a2,_0x342fca,_0x970204){return _0x4b10a2(_0x342fca,_0x970204);}},_0x33f89b=document[_0x2f4714(0x1bc)+_0x2f4714(0x17d)](_0x57e4f7[_0x2f4714(0x1f7)]);_0x33f89b[_0x2f4714(0x265)+'t']=_0x575160,_0x33f89b[_0x2f4714(0x17b)][_0x2f4714(0x20a)]=_0x575160?_0x57e4f7[_0x2f4714(0x123)]:_0x57e4f7[_0x2f4714(0x14f)],_0x33f89b[_0x2f4714(0x263)][_0x2f4714(0x189)](_0x57e4f7[_0x2f4714(0xfd)],_0x57e4f7[_0x2f4714(0x17e)]),_0x57e4f7[_0x2f4714(0x10f)](setTimeout,()=>_0x33f89b[_0x2f4714(0x17b)][_0x2f4714(0x20a)]=_0x2f4714(0x211),-0x15d3+-0xbbf+-0xe*-0x3cb);}function showSuccess(_0x934871){const _0x20a0d0=_0x5cacd9,_0x56e3f2={'NJEMA':_0x20a0d0(0x178)+_0x20a0d0(0x181),'BJxxZ':_0x20a0d0(0x243),'STazu':_0x20a0d0(0x211),'gOyuY':_0x20a0d0(0x22d)+_0x20a0d0(0x242),'ioXVY':_0x20a0d0(0x15d)+_0x20a0d0(0x1ac),'bSOUr':function(_0x1f9277,_0x96fe04,_0x2942b7){return _0x1f9277(_0x96fe04,_0x2942b7);}},_0x458a0a=document[_0x20a0d0(0x1bc)+_0x20a0d0(0x17d)](_0x56e3f2[_0x20a0d0(0x19d)]);_0x458a0a[_0x20a0d0(0x265)+'t']=_0x934871,_0x458a0a[_0x20a0d0(0x17b)][_0x20a0d0(0x20a)]=_0x934871?_0x56e3f2[_0x20a0d0(0x116)]:_0x56e3f2[_0x20a0d0(0x283)],_0x458a0a[_0x20a0d0(0x263)][_0x20a0d0(0x189)](_0x56e3f2[_0x20a0d0(0x102)],_0x56e3f2[_0x20a0d0(0x25a)]),_0x56e3f2[_0x20a0d0(0x221)](setTimeout,()=>_0x458a0a[_0x20a0d0(0x17b)][_0x20a0d0(0x20a)]=_0x20a0d0(0x211),-0x3db+-0x1aec+0x2a7f);}function showWeatherAlert(_0x46fd32){const _0x3fc6e0=_0x5cacd9,_0x449cdb={'CzGSA':_0x3fc6e0(0x250)+'rt','IWYMm':_0x3fc6e0(0x243),'SOaTk':_0x3fc6e0(0x211),'iLQCq':_0x3fc6e0(0x22d)+_0x3fc6e0(0x242),'FacLU':_0x3fc6e0(0x15d)+_0x3fc6e0(0x1ac)},_0x3710f4=document[_0x3fc6e0(0x1bc)+_0x3fc6e0(0x17d)](_0x449cdb[_0x3fc6e0(0x1ea)]);_0x3710f4[_0x3fc6e0(0x265)+'t']=_0x46fd32,_0x3710f4[_0x3fc6e0(0x17b)][_0x3fc6e0(0x20a)]=_0x46fd32?_0x449cdb[_0x3fc6e0(0x273)]:_0x449cdb[_0x3fc6e0(0x19e)],_0x3710f4[_0x3fc6e0(0x263)][_0x3fc6e0(0x189)](_0x449cdb[_0x3fc6e0(0x26b)],_0x449cdb[_0x3fc6e0(0x225)]);}function _0x554c(_0x4b9576,_0x326ec2){const _0x441666=_0x23c1();return _0x554c=function(_0x538207,_0x1f3570){_0x538207=_0x538207-(0x9ec+-0x2f5*-0x1+-0xbea);let _0x2afbf0=_0x441666[_0x538207];return _0x2afbf0;},_0x554c(_0x4b9576,_0x326ec2);}async function getWeather(){const _0x42b504=_0x5cacd9,_0x46fc38={'ydNFj':_0x42b504(0x192),'gUnGH':function(_0x322a8c,_0x120023){return _0x322a8c(_0x120023);},'dTveG':_0x42b504(0x18c)+_0x42b504(0x1df)+_0x42b504(0x17a),'dmWQB':function(_0xf7d4fe,_0x100915){return _0xf7d4fe(_0x100915);},'kabFq':function(_0x46368e,_0x32d505){return _0x46368e(_0x32d505);},'Mcnns':function(_0x5233eb,_0x281703){return _0x5233eb+_0x281703;},'XKNjk':_0x42b504(0x1d7)+_0x42b504(0x1d3)+_0x42b504(0x128),'ztIEC':_0x42b504(0x114),'JTdKp':_0x42b504(0x21a)+_0x42b504(0x15f)+_0x42b504(0x104)+_0x42b504(0x1b8)+_0x42b504(0x1c2)+_0x42b504(0x227)+_0x42b504(0x25d),'MBdxx':function(_0x294f60,_0x10b2d0){return _0x294f60+_0x10b2d0;},'tGajU':_0x42b504(0x11a)+_0x42b504(0x269)+_0x42b504(0x287),'mooXU':function(_0x12553e,_0x160f4d){return _0x12553e+_0x160f4d;},'PyrDb':_0x42b504(0x1de)+_0x42b504(0x24a)+_0x42b504(0x18f),'nQjUM':function(_0x2374cd,_0xbba852){return _0x2374cd+_0xbba852;},'ZYetv':_0x42b504(0x13b)+_0x42b504(0x144)+_0x42b504(0x111)+':\x20','bPvwf':function(_0x53c3db,_0x1ea049,_0x470253,_0x5d658a){return _0x53c3db(_0x1ea049,_0x470253,_0x5d658a);},'hKBIM':function(_0x4dee00,_0xc662e1){return _0x4dee00(_0xc662e1);},'JAbkq':_0x42b504(0x11a)+_0x42b504(0x157)+_0x42b504(0x126)+_0x42b504(0x1fe),'VpVVD':function(_0x30af27,_0x485209){return _0x30af27(_0x485209);}},_0x29bb63=document[_0x42b504(0x1bc)+_0x42b504(0x17d)](_0x46fc38[_0x42b504(0x285)]),_0x18cf54=_0x29bb63[_0x42b504(0x12f)][_0x42b504(0x28b)]();if(!_0x18cf54){_0x46fc38[_0x42b504(0x27b)](showError,_0x46fc38[_0x42b504(0x258)]);return;}_0x46fc38[_0x42b504(0x1b0)](showLoading,!![]);try{const _0x130c9d=await _0x46fc38[_0x42b504(0x165)](fetch,_0x42b504(0x20b)+_0x42b504(0x27a)+_0x42b504(0x1b3)+_0x42b504(0xf8)+_0x42b504(0x25c)+_0x18cf54+(_0x42b504(0x1cd)+_0x42b504(0x218))+API_KEY);if(!_0x130c9d['ok'])throw new Error(_0x46fc38[_0x42b504(0x13c)](_0x46fc38[_0x42b504(0x1cb)],_0x130c9d[_0x42b504(0x1d4)]));const _0x161126=await _0x130c9d[_0x42b504(0x26d)]();console[_0x42b504(0x288)](_0x46fc38[_0x42b504(0x161)],_0x161126);if(!_0x161126[_0x42b504(0x1a8)])throw new Error(_0x46fc38[_0x42b504(0x14d)]);const {lat:_0x55ba65,lon:_0x40af19}=_0x161126[-0x1*0x15d1+-0x1def+0x2e0*0x12],_0x32c9b7=await _0x46fc38[_0x42b504(0x1b0)](fetch,_0x42b504(0x20b)+_0x42b504(0x27a)+_0x42b504(0x1b3)+_0x42b504(0x1dc)+_0x42b504(0x201)+'t='+_0x55ba65+_0x42b504(0x1ff)+_0x40af19+(_0x42b504(0x107)+_0x42b504(0x1e4))+API_KEY);if(!_0x32c9b7['ok'])throw new Error(_0x46fc38[_0x42b504(0x23d)](_0x46fc38[_0x42b504(0x28f)],_0x32c9b7[_0x42b504(0x1d4)]));const _0x10fd0c=await _0x32c9b7[_0x42b504(0x26d)](),_0x517a2e=await _0x46fc38[_0x42b504(0x1b0)](fetch,_0x42b504(0x20b)+_0x42b504(0x27a)+_0x42b504(0x1b3)+_0x42b504(0x1dc)+_0x42b504(0x20e)+_0x42b504(0x10c)+_0x55ba65+_0x42b504(0x1ff)+_0x40af19+(_0x42b504(0x107)+_0x42b504(0x1e4))+API_KEY);if(!_0x517a2e['ok'])throw new Error(_0x46fc38[_0x42b504(0x151)](_0x46fc38[_0x42b504(0x1cc)],_0x517a2e[_0x42b504(0x1d4)]));const _0x159359=await _0x517a2e[_0x42b504(0x26d)](),_0x50891a=await _0x46fc38[_0x42b504(0x27b)](fetch,_0x42b504(0x20b)+_0x42b504(0x27a)+_0x42b504(0x1b3)+_0x42b504(0x1dc)+_0x42b504(0x179)+_0x42b504(0x21f)+_0x55ba65+_0x42b504(0x1ff)+_0x40af19+_0x42b504(0x22e)+API_KEY);if(!_0x50891a['ok'])throw new Error(_0x46fc38[_0x42b504(0x1e1)](_0x46fc38[_0x42b504(0x133)],_0x50891a[_0x42b504(0x1d4)]));const _0x3aa227=await _0x50891a[_0x42b504(0x26d)]();_0x46fc38[_0x42b504(0x18e)](updateWeatherUI,_0x10fd0c,_0x159359,_0x3aa227),_0x46fc38[_0x42b504(0x16d)](updateBackgroundTheme,_0x10fd0c[_0x42b504(0x1c5)][0xf0c+-0x2366+0x145a*0x1][_0x42b504(0x18a)]),_0x46fc38[_0x42b504(0x1b0)](addToSavedLocations,_0x18cf54),_0x46fc38[_0x42b504(0x1b0)](showSuccess,_0x46fc38[_0x42b504(0x231)]);}catch(_0xeb274c){_0x46fc38[_0x42b504(0x226)](showError,_0xeb274c[_0x42b504(0x26f)]);}finally{_0x46fc38[_0x42b504(0x27b)](showLoading,![]);}}function updateWeatherUI(_0x515f2e,_0x1008ad,_0x35e286){const _0x590b74=_0x5cacd9,_0x5907cd={'ZgMsb':_0x590b74(0x10e),'sOoxS':_0x590b74(0x193),'ErrKi':function(_0x2b9595,_0x391285){return _0x2b9595===_0x391285;},'nSlwb':_0x590b74(0x16c),'fGysw':function(_0x28e415,_0x5a22f0){return _0x28e415+_0x5a22f0;},'HkgkP':function(_0x588490,_0x2026a4){return _0x588490/_0x2026a4;},'GWycG':function(_0x508a1f,_0x35103e){return _0x508a1f*_0x35103e;},'OlHuC':_0x590b74(0x12d)+'e','KEzTx':_0x590b74(0x1fb)+_0x590b74(0x21b),'bJowx':_0x590b74(0x1e8),'KpMtI':_0x590b74(0x15c),'XZZmk':_0x590b74(0x298),'IvPTT':_0x590b74(0x1f4)+'n','yosMN':function(_0x4e5777,_0x5e4988){return _0x4e5777(_0x5e4988);},'lWwdX':_0x590b74(0x22d)+_0x590b74(0x242),'IlNIN':_0x590b74(0x279)+_0x590b74(0x13d),'wHOVx':function(_0x486ba1,_0x8eb8f3){return _0x486ba1(_0x8eb8f3);},'NyCeR':function(_0x4fc5b0,_0x3b4dc7){return _0x4fc5b0(_0x3b4dc7);},'OWibT':function(_0x41568b,_0x5edaaa){return _0x41568b(_0x5edaaa);}};document[_0x590b74(0x1bc)+_0x590b74(0x17d)](_0x5907cd[_0x590b74(0xfa)])[_0x590b74(0x265)+'t']=_0x515f2e[_0x590b74(0x17a)],document[_0x590b74(0x1bc)+_0x590b74(0x17d)](_0x5907cd[_0x590b74(0x182)])[_0x590b74(0x265)+'t']=new Date()[_0x590b74(0x297)+_0x590b74(0x1c6)]();const _0x2c262b=_0x5907cd[_0x590b74(0x1bf)](currentUnit,_0x5907cd[_0x590b74(0x180)])?_0x515f2e[_0x590b74(0x18a)][_0x590b74(0x139)]:_0x5907cd[_0x590b74(0x1c1)](_0x5907cd[_0x590b74(0x215)](_0x5907cd[_0x590b74(0x25f)](_0x515f2e[_0x590b74(0x18a)][_0x590b74(0x139)],0xde+0x2494+0x3d*-0x9d),-0x2566+0x1*0x43b+0x2130),-0x1eaf+0xd51*-0x1+-0x4*-0xb08);document[_0x590b74(0x1bc)+_0x590b74(0x17d)](_0x5907cd[_0x590b74(0x1d9)])[_0x590b74(0x265)+'t']=Math[_0x590b74(0x183)](_0x2c262b)+'°'+(_0x5907cd[_0x590b74(0x1bf)](currentUnit,_0x5907cd[_0x590b74(0x180)])?'C':'F'),document[_0x590b74(0x1bc)+_0x590b74(0x17d)](_0x5907cd[_0x590b74(0x15a)])[_0x590b74(0x265)+'t']=_0x515f2e[_0x590b74(0x1c5)][-0xe4f+-0xc7*0x4+0x116b][_0x590b74(0x1f5)+'n'],document[_0x590b74(0x1bc)+_0x590b74(0x17d)](_0x5907cd[_0x590b74(0x152)])[_0x590b74(0x265)+'t']=_0x515f2e[_0x590b74(0x18a)][_0x590b74(0x1e8)]+'%',document[_0x590b74(0x1bc)+_0x590b74(0x17d)](_0x5907cd[_0x590b74(0x245)])[_0x590b74(0x265)+'t']=_0x5907cd[_0x590b74(0x25f)](_0x515f2e[_0x590b74(0x24d)][_0x590b74(0x1e7)],-0x297*0xc+-0x1*0x455+0x236c+0.6000000000000001)[_0x590b74(0x163)](-0x219*0x3+-0x1a13+-0x1*-0x205f)+_0x590b74(0x284),document[_0x590b74(0x1bc)+_0x590b74(0x17d)](_0x5907cd[_0x590b74(0x100)])[_0x590b74(0x265)+'t']=_0x515f2e[_0x590b74(0x18a)][_0x590b74(0x298)]+_0x590b74(0x22f);const _0x5ac44c=document[_0x590b74(0x1bc)+_0x590b74(0x17d)](_0x5907cd[_0x590b74(0x16e)]);_0x5ac44c[_0x590b74(0x234)]=_0x5907cd[_0x590b74(0x1d5)](getWeatherIcon,_0x515f2e[_0x590b74(0x1c5)][0xf4*-0xc+-0x1121+-0x1*-0x1c91][_0x590b74(0x18a)]),_0x5ac44c[_0x590b74(0x263)][_0x590b74(0x189)](_0x5907cd[_0x590b74(0x278)],_0x5907cd[_0x590b74(0x119)]),_0x5907cd[_0x590b74(0x220)](updateForecast,_0x1008ad),_0x5907cd[_0x590b74(0x170)](updateAirQuality,_0x35e286),_0x5907cd[_0x590b74(0x1ad)](checkWeatherAlerts,_0x515f2e);}function updateForecast(_0x50ee38){const _0x8b0c69=_0x5cacd9,_0x31e893={'qmzBm':function(_0x114c7a,_0x2fbf9a){return _0x114c7a*_0x2fbf9a;},'GEpWj':function(_0x201bf3,_0x2ab099){return _0x201bf3*_0x2ab099;},'DfeVA':function(_0x551a07,_0xec7186){return _0x551a07===_0xec7186;},'YPeMR':_0x8b0c69(0x16c),'hGnzH':function(_0x334193,_0x43ff7e){return _0x334193+_0x43ff7e;},'Yuhkl':function(_0x4e31aa,_0x4c6faa){return _0x4e31aa/_0x4c6faa;},'HCmYi':_0x8b0c69(0x127),'Pnoog':_0x8b0c69(0x1c0)+_0x8b0c69(0x1e3)+_0x8b0c69(0x191)+_0x8b0c69(0x248)+_0x8b0c69(0x256),'zMGfQ':_0x8b0c69(0x187),'WXbtr':_0x8b0c69(0x19f),'WVJyn':function(_0x229507,_0x422d93){return _0x229507(_0x422d93);},'FjgZp':_0x8b0c69(0x184)},_0x3e51ce=document[_0x8b0c69(0x1bc)+_0x8b0c69(0x17d)](_0x31e893[_0x8b0c69(0x289)]);_0x3e51ce[_0x8b0c69(0x234)]='';const _0x2bb539={};_0x50ee38[_0x8b0c69(0x29a)][_0x8b0c69(0x1e5)](_0x2b4e78=>{const _0x544f6f=_0x8b0c69,_0x1681cf=new Date(_0x31e893[_0x544f6f(0x12e)](_0x2b4e78['dt'],-0x765+-0x1e4+0xd31))[_0x544f6f(0x1f0)+_0x544f6f(0x160)]();!_0x2bb539[_0x1681cf]&&(_0x2bb539[_0x1681cf]=_0x2b4e78);}),Object[_0x8b0c69(0x205)](_0x2bb539)[_0x8b0c69(0x240)](-0x1*-0xd6f+-0x263b+0x18cd,-0x49f+0xe9f+-0x9fa)[_0x8b0c69(0x1e5)](_0xbb8613=>{const _0x5998b5=_0x8b0c69,_0x18b3fd=new Date(_0x31e893[_0x5998b5(0x1ae)](_0xbb8613['dt'],0x2557+0x10fa+-0x3269)),_0x86484d=_0x31e893[_0x5998b5(0x1be)](currentUnit,_0x31e893[_0x5998b5(0x20d)])?_0xbb8613[_0x5998b5(0x18a)][_0x5998b5(0x139)]:_0x31e893[_0x5998b5(0x14b)](_0x31e893[_0x5998b5(0x268)](_0x31e893[_0x5998b5(0x1ae)](_0xbb8613[_0x5998b5(0x18a)][_0x5998b5(0x139)],0x1*-0x16ef+0x2*-0x112f+0x3956),-0xd9c+-0x26ea+-0x1*-0x348b),-0x822*-0x3+-0x1140+-0x706),_0xc56f53=document[_0x5998b5(0x1d2)+_0x5998b5(0x10a)](_0x31e893[_0x5998b5(0x166)]);_0xc56f53[_0x5998b5(0x148)]=_0x31e893[_0x5998b5(0x134)],_0xc56f53[_0x5998b5(0x234)]=_0x5998b5(0x292)+_0x5998b5(0x1ef)+_0x5998b5(0x236)+_0x5998b5(0x26c)+_0x5998b5(0x24b)+_0x18b3fd[_0x5998b5(0x1f0)+_0x5998b5(0x160)](_0x31e893[_0x5998b5(0x246)],{'weekday':_0x31e893[_0x5998b5(0x244)]})+(_0x5998b5(0x121)+_0x5998b5(0x1ef)+_0x5998b5(0x260)+_0x5998b5(0x1dd)+_0x5998b5(0x143)+_0x5998b5(0x174))+_0x31e893[_0x5998b5(0x1a1)](getWeatherIcon,_0xbb8613[_0x5998b5(0x1c5)][0x104c+0xd*-0x220+0xb54][_0x5998b5(0x18a)])+(_0x5998b5(0x121)+_0x5998b5(0x1ef)+_0x5998b5(0x260)+'v>')+Math[_0x5998b5(0x183)](_0x86484d)+'°'+(_0x31e893[_0x5998b5(0x1be)](currentUnit,_0x31e893[_0x5998b5(0x20d)])?'C':'F')+(_0x5998b5(0x121)+_0x5998b5(0x1ef)+_0x5998b5(0x260)+'v>')+_0xbb8613[_0x5998b5(0x1c5)][0x2062+-0x8f*-0x2a+-0x37d8*0x1][_0x5998b5(0x1f5)+'n']+(_0x5998b5(0x121)+_0x5998b5(0x1ef)+_0x5998b5(0x12a)),_0x3e51ce[_0x5998b5(0x145)+'d'](_0xc56f53);});}function updateAirQuality(_0x13db1f){const _0x3fe456=_0x5cacd9,_0xaac6aa={'VLrHg':_0x3fe456(0x1bd),'TlvKk':_0x3fe456(0x13e),'Xlaza':_0x3fe456(0x270),'PaLxS':_0x3fe456(0x213),'zOQiO':_0x3fe456(0x1e6),'cpAwR':_0x3fe456(0x209)+_0x3fe456(0x202),'tXrDV':function(_0x2c8702,_0x509f49){return _0x2c8702(_0x509f49);}},_0x1dd2bc=_0x13db1f[_0x3fe456(0x29a)][0x875+0xd*0x7f+-0xee8*0x1][_0x3fe456(0x18a)][_0x3fe456(0x204)],_0x2b348e={0x1:_0xaac6aa[_0x3fe456(0x23b)],0x2:_0xaac6aa[_0x3fe456(0x296)],0x3:_0xaac6aa[_0x3fe456(0x294)],0x4:_0xaac6aa[_0x3fe456(0x1fa)],0x5:_0xaac6aa[_0x3fe456(0x272)]};document[_0x3fe456(0x1bc)+_0x3fe456(0x17d)](_0xaac6aa[_0x3fe456(0x299)])[_0x3fe456(0x265)+'t']=_0x3fe456(0x24f)+_0x3fe456(0x175)+_0x2b348e[_0x1dd2bc],_0xaac6aa[_0x3fe456(0x18d)](updateAQIGauge,_0x1dd2bc);}function updateAQIGauge(_0x579a5e){const _0x22dfd0=_0x5cacd9,_0x72adcb={'OtMRN':_0x22dfd0(0x19a),'IEqyE':_0x22dfd0(0x1d6),'FUmzf':function(_0x2a98b5,_0x50bc55){return _0x2a98b5+_0x50bc55;},'CxRPb':function(_0xa3abe9,_0x41a0dc){return _0xa3abe9*_0x41a0dc;},'onPDr':function(_0x347b27,_0x18fdae){return _0x347b27/_0x18fdae;},'FMOzE':function(_0x21c139,_0x31fbd2){return _0x21c139(_0x31fbd2);},'VRdsD':_0x22dfd0(0x281)},_0x2254d0=document[_0x22dfd0(0x1d2)+_0x22dfd0(0x10a)](_0x72adcb[_0x22dfd0(0x198)]);_0x2254d0[_0x22dfd0(0x171)]=-0xa57+0xc1+0x2*0x52f,_0x2254d0[_0x22dfd0(0x23c)]=0x67*-0xf+-0xae9+0x1156;const _0x1a6a4d=_0x2254d0[_0x22dfd0(0x188)]('2d');_0x1a6a4d[_0x22dfd0(0x210)](),_0x1a6a4d[_0x22dfd0(0x12b)](-0x1d26+-0x2d*0x4d+0x1*0x2b13,0x1*-0x1246+-0x74c+0x19e2,0x1ebe*0x1+0x1*-0xbcb+-0x12b7,Math['PI'],-0x459+-0x1a7*0x1+0x600),_0x1a6a4d[_0x22dfd0(0x197)+'e']=_0x72adcb[_0x22dfd0(0x110)],_0x1a6a4d[_0x22dfd0(0x1ca)]=-0xb*0xf2+0x1919+-0xea9,_0x1a6a4d[_0x22dfd0(0x1a4)](),_0x1a6a4d[_0x22dfd0(0x210)](),_0x1a6a4d[_0x22dfd0(0x12b)](-0x25*0x10c+0x17d2+0xf4e,0x3*-0xbb1+0x23d9+0x1*-0x76,0x17d2+0x6e7*-0x1+-0x10af,Math['PI'],_0x72adcb[_0x22dfd0(0x17f)](Math['PI'],_0x72adcb[_0x22dfd0(0xfc)](_0x72adcb[_0x22dfd0(0x1f2)](_0x579a5e,0x1513+0x1f0f+0x115f*-0x3),Math['PI']))),_0x1a6a4d[_0x22dfd0(0x197)+'e']=_0x72adcb[_0x22dfd0(0x1d0)](getAQIColor,_0x579a5e),_0x1a6a4d[_0x22dfd0(0x1a4)]();const _0x4e1897=document[_0x22dfd0(0x1bc)+_0x22dfd0(0x17d)](_0x72adcb[_0x22dfd0(0x105)]);_0x4e1897[_0x22dfd0(0x234)]='',_0x4e1897[_0x22dfd0(0x145)+'d'](_0x2254d0);}function getAQIColor(_0x373572){const _0x4d329b=_0x5cacd9,_0x57a343={'DCkta':_0x4d329b(0x282),'LznIr':_0x4d329b(0x241),'VvFdG':_0x4d329b(0x266),'Lvvdc':_0x4d329b(0x158),'nEsPP':_0x4d329b(0x1b1)},_0x13010a={0x1:_0x57a343[_0x4d329b(0x206)],0x2:_0x57a343[_0x4d329b(0x232)],0x3:_0x57a343[_0x4d329b(0x23e)],0x4:_0x57a343[_0x4d329b(0x217)],0x5:_0x57a343[_0x4d329b(0x29b)]};return _0x13010a[_0x373572];}function getWeatherIcon(_0x2e4dcc){const _0x399fa2=_0x5cacd9,_0x840320={'rKFNU':_0x399fa2(0x21d)+_0x399fa2(0x15e)+_0x399fa2(0x138),'BUQPR':_0x399fa2(0x21d)+_0x399fa2(0x132)+_0x399fa2(0x106),'mPZxD':_0x399fa2(0x21d)+_0x399fa2(0x132)+_0x399fa2(0x147)+_0x399fa2(0x115),'dwzgP':_0x399fa2(0x21d)+_0x399fa2(0x173)+_0x399fa2(0x1f6)+'i>','HqPGh':_0x399fa2(0x21d)+_0x399fa2(0x199)+_0x399fa2(0x237),'FENAe':_0x399fa2(0x21d)+_0x399fa2(0x29c)+_0x399fa2(0x113)},_0x3d08fe={'Clear':_0x840320[_0x399fa2(0x1b2)],'Clouds':_0x840320[_0x399fa2(0x109)],'Rain':_0x840320[_0x399fa2(0x27d)],'Snow':_0x840320[_0x399fa2(0x24e)],'Thunderstorm':_0x840320[_0x399fa2(0x224)],'Drizzle':_0x840320[_0x399fa2(0x27d)],'Mist':_0x840320[_0x399fa2(0x13f)],'Smoke':_0x840320[_0x399fa2(0x13f)],'Haze':_0x840320[_0x399fa2(0x13f)],'Dust':_0x840320[_0x399fa2(0x13f)],'Fog':_0x840320[_0x399fa2(0x13f)]};return _0x3d08fe[_0x2e4dcc]||_0x840320[_0x399fa2(0x109)];}function updateBackgroundTheme(_0x272da8){const _0x7f8503=_0x5cacd9,_0x1e4328={'JmWzQ':_0x7f8503(0x117)+_0x7f8503(0x219)+_0x7f8503(0x1cf)+_0x7f8503(0x167)+_0x7f8503(0x1a0),'ZlbqY':_0x7f8503(0x117)+_0x7f8503(0x219)+_0x7f8503(0x28a)+_0x7f8503(0x1ab)+_0x7f8503(0x252),'HIBGt':_0x7f8503(0x117)+_0x7f8503(0x219)+_0x7f8503(0x11d)+_0x7f8503(0x20c)+_0x7f8503(0x196),'CdVbp':_0x7f8503(0x117)+_0x7f8503(0x219)+_0x7f8503(0x277)+_0x7f8503(0x17c)+_0x7f8503(0x27c),'JPZQG':_0x7f8503(0x117)+_0x7f8503(0x219)+_0x7f8503(0x229)+_0x7f8503(0x29e)+_0x7f8503(0x29d),'SfgvD':_0x7f8503(0x117)+_0x7f8503(0x219)+_0x7f8503(0x1b5)+_0x7f8503(0x286)+_0x7f8503(0x252),'YyqdW':_0x7f8503(0x117)+_0x7f8503(0x219)+_0x7f8503(0x280)+_0x7f8503(0x214)+_0x7f8503(0x27c),'tkBqk':_0x7f8503(0x117)+_0x7f8503(0x219)+_0x7f8503(0x274)+_0x7f8503(0x249)+_0x7f8503(0x16b)},_0x44a80f={'Clear':_0x1e4328[_0x7f8503(0x18b)],'Clouds':_0x1e4328[_0x7f8503(0x194)],'Rain':_0x1e4328[_0x7f8503(0xfe)],'Snow':_0x1e4328[_0x7f8503(0x169)],'Thunderstorm':_0x1e4328[_0x7f8503(0x176)],'Drizzle':_0x1e4328[_0x7f8503(0x162)],'Mist':_0x1e4328[_0x7f8503(0x290)]};document[_0x7f8503(0x271)][_0x7f8503(0x17b)][_0x7f8503(0x1a7)]=_0x44a80f[_0x272da8]||_0x1e4328[_0x7f8503(0x216)];}function checkWeatherAlerts(_0x18a19d){const _0x25afe6=_0x5cacd9,_0x5a19a3={'ZCmqO':function(_0x30e930,_0x22738f){return _0x30e930>_0x22738f;},'ksAhj':_0x25afe6(0x1fd)+_0x25afe6(0x142)+_0x25afe6(0x25e)+_0x25afe6(0x1c3)+_0x25afe6(0x22c)+_0x25afe6(0x15b)+_0x25afe6(0x230),'UaCah':function(_0x5f02f5,_0x1f874d){return _0x5f02f5<_0x1f874d;},'OuHpC':_0x25afe6(0x1c7)+_0x25afe6(0xff)+_0x25afe6(0x228)+_0x25afe6(0x20f)+_0x25afe6(0x1aa)+_0x25afe6(0x208),'HIyAe':_0x25afe6(0x1ba)+_0x25afe6(0x22a)+_0x25afe6(0x1ce)+_0x25afe6(0x1a9)+_0x25afe6(0x28d)+_0x25afe6(0x267),'hAZBZ':function(_0x3bcb36,_0x11c5d6){return _0x3bcb36(_0x11c5d6);}},_0x467eea=[];_0x5a19a3[_0x25afe6(0x22b)](_0x18a19d[_0x25afe6(0x18a)][_0x25afe6(0x139)],0xb75+0x2206+0x2*-0x16ac)&&_0x467eea[_0x25afe6(0x1a6)](_0x5a19a3[_0x25afe6(0x23a)]),_0x5a19a3[_0x25afe6(0x1f1)](_0x18a19d[_0x25afe6(0x18a)][_0x25afe6(0x139)],-0xa7*-0x1a+-0x1900+0x80a)&&_0x467eea[_0x25afe6(0x1a6)](_0x5a19a3[_0x25afe6(0x1c4)]),_0x5a19a3[_0x25afe6(0x22b)](_0x18a19d[_0x25afe6(0x24d)][_0x25afe6(0x1e7)],-0x22bf+0x27d+-0x2*-0x102b)&&_0x467eea[_0x25afe6(0x1a6)](_0x5a19a3[_0x25afe6(0x137)]),_0x5a19a3[_0x25afe6(0x103)](showWeatherAlert,_0x467eea[_0x25afe6(0x1f8)]('\x0a'));}function useCurrentLocation(){const _0x5b8f9e=_0x5cacd9,_0x348f30={'fihyD':function(_0x594141,_0x326deb){return _0x594141(_0x326deb);},'kUjEM':_0x5b8f9e(0x11a)+_0x5b8f9e(0x269)+_0x5b8f9e(0x140),'lhCxT':_0x5b8f9e(0x192),'xjDBG':function(_0x25424f){return _0x25424f();},'HcgDP':function(_0x2ccf9a,_0x1334fb){return _0x2ccf9a(_0x1334fb);},'UYbMd':_0x5b8f9e(0x25b)+_0x5b8f9e(0x131)+_0x5b8f9e(0x1af),'GdFqZ':function(_0x2e6d6f,_0x3baf20){return _0x2e6d6f(_0x3baf20);},'DsMrG':_0x5b8f9e(0xf9)+_0x5b8f9e(0x239)+_0x5b8f9e(0x1b9)+_0x5b8f9e(0x203)+_0x5b8f9e(0x254)};navigator[_0x5b8f9e(0x1c8)+'n']?(_0x348f30[_0x5b8f9e(0x1a3)](showLoading,!![]),navigator[_0x5b8f9e(0x1c8)+'n'][_0x5b8f9e(0x293)+_0x5b8f9e(0x253)](async _0x5eef55=>{const _0x2f5714=_0x5b8f9e;try{const {latitude:_0xa992f9,longitude:_0x17e9da}=_0x5eef55[_0x2f5714(0x247)],_0x2cb322=await _0x348f30[_0x2f5714(0x1a3)](fetch,_0x2f5714(0x20b)+_0x2f5714(0x27a)+_0x2f5714(0x1b3)+_0x2f5714(0x1dc)+_0x2f5714(0x201)+'t='+_0xa992f9+_0x2f5714(0x1ff)+_0x17e9da+(_0x2f5714(0x107)+_0x2f5714(0x1e4))+API_KEY);if(!_0x2cb322['ok'])throw new Error(_0x348f30[_0x2f5714(0x257)]);const _0x25f1f9=await _0x2cb322[_0x2f5714(0x26d)]();document[_0x2f5714(0x1bc)+_0x2f5714(0x17d)](_0x348f30[_0x2f5714(0x235)])[_0x2f5714(0x12f)]=_0x25f1f9[_0x2f5714(0x17a)],_0x348f30[_0x2f5714(0x1fc)](getWeather);}catch(_0x9ee904){_0x348f30[_0x2f5714(0x1a3)](showError,_0x9ee904[_0x2f5714(0x26f)]);}finally{_0x348f30[_0x2f5714(0x251)](showLoading,![]);}},_0x5ab9db=>{const _0x16272c=_0x5b8f9e;_0x348f30[_0x16272c(0x1a3)](showError,_0x348f30[_0x16272c(0x177)]),_0x348f30[_0x16272c(0x21e)](showLoading,![]);})):_0x348f30[_0x5b8f9e(0x1a3)](showError,_0x348f30[_0x5b8f9e(0x1b7)]);}function addToSavedLocations(_0x2f45d4){const _0x17c916=_0x5cacd9,_0xb8c8b3={'IyGmq':function(_0x59a04a,_0x29072e){return _0x59a04a>_0x29072e;},'IvweB':_0x17c916(0x168)+_0x17c916(0x149),'GXXkv':function(_0x3a30e9){return _0x3a30e9();}};!savedLocations[_0x17c916(0x14e)](_0x2f45d4)&&(savedLocations[_0x17c916(0x1a6)](_0x2f45d4),_0xb8c8b3[_0x17c916(0x1eb)](savedLocations[_0x17c916(0x1a8)],-0xc38+0x27e*-0x7+0x1*0x1daf)&&savedLocations[_0x17c916(0x155)](),localStorage[_0x17c916(0x1f9)](_0xb8c8b3[_0x17c916(0x255)],JSON[_0x17c916(0x27e)](savedLocations)),_0xb8c8b3[_0x17c916(0x28c)](updateSavedLocations));}function _0x23c1(){const _0x48253a=['Position','wser','IvweB','_fadeIn','kUjEM','dTveG','filter','ioXVY','Unable\x20to\x20','irect?q=','\x20city.','!\x20Stay\x20hyd','GWycG','\x20\x20\x20\x20\x20\x20\x20<di','dataset','HrXgL','classList','DOMContent','textConten','#ff7e00','ution.','Yuhkl','ta\x20not\x20ava','active','iLQCq','s=\x22forecas','json','ExXaQ','message','Moderate','body','zOQiO','IWYMm','eg,\x20#a1c4f','addEventLi','16ZcDcOr','eg,\x20#36480','lWwdX','animate__b','i.openweat','gUnGH','6a1\x20100%)','mPZxD','stringify','\x20<span\x20onc','eg,\x20#43581','aqiGauge','#00e400','STazu','\x20km/h','ydNFj','1\x200%,\x20#66a','ilable:\x20','log','FjgZp','eg,\x20#19288','trim','GXXkv','xercise\x20ca','</span>\x0a\x20\x20','tGajU','YyqdW','IYviT','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20','getCurrent','Xlaza','remove','TlvKk','toLocaleSt','pressure','cpAwR','list','nEsPP','fas\x20fa-smo','895\x20100%)','f\x200%,\x20#537','mtHlq','/geo/1.0/d','Geolocatio','ZgMsb','torAll','CxRPb','UJHyk','HIBGt','onditions!','XZZmk','\x22\x20onclick=','gOyuY','hAZBZ','se\x20check\x20t','VRdsD','ud\x22></i>','&units=met','Dybup','BUQPR','ent','chSavedLoc','at=','10ZBLdLV','cityName','ULjxT','IEqyE','\x20available','saved-loca','g\x22></i>','Geo\x20Data:','/i>','BJxxZ','linear-gra','__fadeIn','IlNIN','Weather\x20da','s\x20fa-times','a004de06e2','eg,\x20#13547','lNPTg','2AdlmMO','MJCtt','</div>\x0a\x20\x20\x20','PXeYa','PjeiA','querySelec','189151levTbp','\x20successfu','div','ata:\x20','te__animat','\x20\x20\x20','arc','VXnmk','temperatur','qmzBm','value','FYfnk','get\x20your\x20l','fas\x20fa-clo','ZYetv','Pnoog','rlay','Enter','HIyAe','\x22></i>','temp','1329640GlFkQQ','Air\x20qualit','Mcnns','ounce','Fair','FENAe','ilable','parse','at\x20warning','eather-ico','y\x20data\x20not','appendChil','ozzQR','ud-rain\x22><','className','ions','errorMessa','hGnzH','keypress','JTdKp','includes','QMuOl','1359589sQqDVt','mooXU','bJowx','loadingOve','\x20class=\x22fa','shift','VzzoV','ta\x20updated','#ff0000','VxmkI','KEzTx','onged\x20sun\x20','windSpeed','animate__f','fas\x20fa-sun','ound.\x20Plea','teString','ztIEC','SfgvD','toFixed','WwkIY','kabFq','HCmYi','9\x200%,\x20#fda','savedLocat','CdVbp','\x20\x20\x20\x20\x20\x20\x20\x20<i','9fb\x20100%)','celsius','hKBIM','IvPTT','Loaded','NyCeR','width','click','fas\x20fa-sno','n\x22>','y:\x20','JPZQG','UYbMd','successMes','air_pollut','name','style','f\x200%,\x20#96e','ById','BudqH','FUmzf','nSlwb','sage','sOoxS','round','forecast','4xYFHfa','\x27)\x22>','en-US','getContext','add','main','JmWzQ','Please\x20ent','tXrDV','bPvwf','ailable:\x20','84fc4d2048','e__animate','cityInput','dateTime','ZlbqY','\x20\x20\x20\x20\x20','0c7\x20100%)','strokeStyl','OtMRN','fas\x20fa-bol','canvas','vBeDg','lick=\x22sear','NJEMA','SOaTk','short','085\x20100%)','WVJyn','ed\x20animate','fihyD','stroke','--°','push','background','length','ects\x20and\x20e','ainst\x20ice\x20','8\x200%,\x20#66a','adeIn','OWibT','GEpWj','ocation','dmWQB','#99004c','rKFNU','hermap.org','OPoUt','eg,\x20#073d4','.unit-btn','DsMrG','he\x20spellin','upported\x20b','Strong\x20win','131695LZlKxB','getElement','Good','DfeVA','ErrKi','forecast-c','fGysw','g\x20or\x20try\x20a','rated\x20and\x20','OuHpC','weather','ring','Freezing\x20c','geolocatio','sbVGW','lineWidth','XKNjk','PyrDb','&limit=1&a','\x20loose\x20obj','eg,\x20#283d8','FMOzE','84CHcIGh','createElem','hing\x20geo\x20d','statusText','yosMN','#333','Error\x20fetc','flex','OlHuC','getItem','ation(\x27','/data/2.5/','v\x20class=\x22w','Forecast\x20d','er\x20a\x20city\x20','664803xMHCSy','nQjUM','stener','ard\x20animat','ric&appid=','forEach','Very\x20Poor','speed','humidity','60BxrNwk','CzGSA','IyGmq','\x22removeLoc','tion\x20anima','IwvjE','\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','toLocaleDa','UaCah','onPDr','zdVAl','weatherIco','descriptio','wflake\x22></','NxVzU','join','setItem','PaLxS','weatherDes','xjDBG','Extreme\x20he','lly','&lon=','\x27)\x22></i>\x0a\x20','weather?la','tion','y\x20your\x20bro','aqi','values','DCkta','KxiJU','and\x20frost.','aqiDescrip','display','https://ap','a\x200%,\x20#80d','YPeMR','forecast?l','autions\x20ag','beginPath','none','624876fffNkh','Poor','3\x200%,\x20#96e','HkgkP','tkBqk','Lvvdc','ppid=','dient(120d','City\x20not\x20f','cription','61917mscOjp','<i\x20class=\x22','GdFqZ','ion?lat=','wHOVx','bSOUr','key','bmiBF','HqPGh','FacLU','VpVVD','\x20different','\x20Take\x20prec','eg,\x20#09203','ds!\x20Secure','ZCmqO','avoid\x20prol','animate__a','&appid=','\x20hPa','exposure.','JAbkq','LznIr','5ed572fc6d','innerHTML','lhCxT','\x20<div\x20clas','t\x22></i>','jgivR','n\x20is\x20not\x20s','ksAhj','VLrHg','height','MBdxx','VvFdG','nfdbA','slice','#ffff00','nimated','block','WXbtr','KpMtI','zMGfQ','coords','d\x20animate_','d\x200%,\x20#c2e','ata\x20not\x20av','t-day\x22>','unit','wind','dwzgP','Air\x20Qualit','weatherAle','HcgDP','6ff\x20100%)'];_0x23c1=function(){return _0x48253a;};return _0x23c1();}function updateSavedLocations(){const _0x5db7ed=_0x5cacd9,_0xeb0c67={'ExXaQ':_0x5db7ed(0x127),'VzzoV':_0x5db7ed(0x112)+_0x5db7ed(0x1ed)+_0x5db7ed(0x129)+_0x5db7ed(0x1a2)+_0x5db7ed(0x118),'VxmkI':_0x5db7ed(0x168)+_0x5db7ed(0x149)},_0x490410=document[_0x5db7ed(0x1bc)+_0x5db7ed(0x17d)](_0xeb0c67[_0x5db7ed(0x159)]);_0x490410[_0x5db7ed(0x234)]='',savedLocations[_0x5db7ed(0x1e5)](_0x15a4a5=>{const _0x45a275=_0x5db7ed,_0x6addd0=document[_0x45a275(0x1d2)+_0x45a275(0x10a)](_0xeb0c67[_0x45a275(0x26e)]);_0x6addd0[_0x45a275(0x148)]=_0xeb0c67[_0x45a275(0x156)],_0x6addd0[_0x45a275(0x234)]=_0x45a275(0x292)+_0x45a275(0x1ef)+_0x45a275(0x27f)+_0x45a275(0x19c)+_0x45a275(0x10b)+_0x45a275(0x1db)+_0x15a4a5+_0x45a275(0x186)+_0x15a4a5+(_0x45a275(0x28e)+_0x45a275(0x1ef)+_0x45a275(0x16a)+_0x45a275(0x154)+_0x45a275(0x11b)+_0x45a275(0x101)+_0x45a275(0x1ec)+_0x45a275(0x1db))+_0x15a4a5+(_0x45a275(0x200)+_0x45a275(0x1ef)+_0x45a275(0x195)),_0x490410[_0x45a275(0x145)+'d'](_0x6addd0);});}function searchSavedLocation(_0x448b3b){const _0x551a5d=_0x5cacd9,_0x28f3ca={'OPoUt':_0x551a5d(0x192),'Dybup':function(_0x5f311c){return _0x5f311c();}};document[_0x551a5d(0x1bc)+_0x551a5d(0x17d)](_0x28f3ca[_0x551a5d(0x1b4)])[_0x551a5d(0x12f)]=_0x448b3b,_0x28f3ca[_0x551a5d(0x108)](getWeather);}function removeLocation(_0x3de06d){const _0x40e90b=_0x5cacd9,_0x2532a1={'jgivR':_0x40e90b(0x168)+_0x40e90b(0x149),'WwkIY':function(_0x10fcac){return _0x10fcac();}};savedLocations=savedLocations[_0x40e90b(0x259)](_0x45440c=>_0x45440c!==_0x3de06d),localStorage[_0x40e90b(0x1f9)](_0x2532a1[_0x40e90b(0x238)],JSON[_0x40e90b(0x27e)](savedLocations)),_0x2532a1[_0x40e90b(0x164)](updateSavedLocations);}document[_0x5cacd9(0x124)+_0x5cacd9(0xfb)](_0x5cacd9(0x1b6))[_0x5cacd9(0x1e5)](_0x5d9092=>{const _0x2f9727=_0x5cacd9,_0x1163cc={'FYfnk':function(_0x479cad,_0x4ba53a){return _0x479cad!==_0x4ba53a;},'zdVAl':_0x2f9727(0x1b6),'IYviT':_0x2f9727(0x26a),'ozzQR':_0x2f9727(0x12d)+'e','KxiJU':_0x2f9727(0x1a5),'vBeDg':function(_0x161b28){return _0x161b28();},'IwvjE':_0x2f9727(0x172)};_0x5d9092[_0x2f9727(0x275)+_0x2f9727(0x1e2)](_0x1163cc[_0x2f9727(0x1ee)],()=>{const _0x36122e=_0x2f9727,_0x3470d5=_0x5d9092[_0x36122e(0x261)][_0x36122e(0x24c)];_0x1163cc[_0x36122e(0x130)](_0x3470d5,currentUnit)&&(currentUnit=_0x3470d5,document[_0x36122e(0x124)+_0x36122e(0xfb)](_0x1163cc[_0x36122e(0x1f3)])[_0x36122e(0x1e5)](_0x12a8c7=>_0x12a8c7[_0x36122e(0x263)][_0x36122e(0x295)](_0x36122e(0x26a))),_0x5d9092[_0x36122e(0x263)][_0x36122e(0x189)](_0x1163cc[_0x36122e(0x291)]),_0x1163cc[_0x36122e(0x130)](document[_0x36122e(0x1bc)+_0x36122e(0x17d)](_0x1163cc[_0x36122e(0x146)])[_0x36122e(0x265)+'t'],_0x1163cc[_0x36122e(0x207)])&&_0x1163cc[_0x36122e(0x19b)](getWeather));});}),document[_0x5cacd9(0x275)+_0x5cacd9(0x1e2)](_0x5cacd9(0x264)+_0x5cacd9(0x16f),()=>{const _0x31742f=_0x5cacd9,_0x2ad19b={'bmiBF':function(_0x2417c9,_0x2706e7){return _0x2417c9===_0x2706e7;},'PXeYa':_0x31742f(0x136),'MJCtt':function(_0x41ed43){return _0x41ed43();},'sbVGW':function(_0x51b291){return _0x51b291();},'HrXgL':_0x31742f(0x192),'VXnmk':_0x31742f(0x14c)};_0x2ad19b[_0x31742f(0x1c9)](updateSavedLocations),document[_0x31742f(0x1bc)+_0x31742f(0x17d)](_0x2ad19b[_0x31742f(0x262)])[_0x31742f(0x275)+_0x31742f(0x1e2)](_0x2ad19b[_0x31742f(0x12c)],_0x37967d=>{const _0x368ab9=_0x31742f;_0x2ad19b[_0x368ab9(0x223)](_0x37967d[_0x368ab9(0x222)],_0x2ad19b[_0x368ab9(0x122)])&&_0x2ad19b[_0x368ab9(0x120)](getWeather);});});
+        const API_KEY = '84fc4d20485ed572fc6da004de06e214';
+        let currentUnit = 'celsius';
+        let savedLocations = JSON.parse(localStorage.getItem('savedLocations')) || [];
+
+        function showLoading(show) {
+            document.getElementById('loadingOverlay').style.display = show ? 'flex' : 'none';
+        }
+
+        function showError(message) {
+            const errorElement = document.getElementById('errorMessage');
+            errorElement.textContent = message;
+            errorElement.style.display = message ? 'block' : 'none';
+            errorElement.classList.add('animate__animated', 'animate__fadeIn');
+            setTimeout(() => errorElement.style.display = 'none', 5000);
+        }
+
+        function showSuccess(message) {
+            const successElement = document.getElementById('successMessage');
+            successElement.textContent = message;
+            successElement.style.display = message ? 'block' : 'none';
+            successElement.classList.add('animate__animated', 'animate__fadeIn');
+            setTimeout(() => successElement.style.display = 'none', 3000);
+        }
+
+        function showWeatherAlert(message) {
+            const alertElement = document.getElementById('weatherAlert');
+            alertElement.textContent = message;
+            alertElement.style.display = message ? 'block' : 'none';
+            alertElement.classList.add('animate__animated', 'animate__fadeIn');
+        }
+
+        async function getWeather() {
+    const cityInput = document.getElementById('cityInput');
+    const city = cityInput.value.trim();
+    
+    if (!city) {
+        showError('Please enter a city name');
+        return;
+    }
+    
+    showLoading(true);
+    try {
+        const geoResponse = await fetch(
+            `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${API_KEY}`
+        );
+
+        if (!geoResponse.ok) {
+            throw new Error('Error fetching geo data: ' + geoResponse.statusText);
+        }
+
+        const geoData = await geoResponse.json();
+        console.log('Geo Data:', geoData);
+
+        if (!geoData.length) {
+            throw new Error('City not found. Please check the spelling or try a different city.');
+        }
+
+        const { lat, lon } = geoData[0];
+        
+        // Current weather
+        const weatherResponse = await fetch(
+            `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${API_KEY}`
+        );
+
+        if (!weatherResponse.ok) {
+            throw new Error('Weather data not available: ' + weatherResponse.statusText);
+        }
+        
+        const weatherData = await weatherResponse.json();
+        
+        // Forecast
+        const forecastResponse = await fetch(
+            `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${API_KEY}`
+        );
+
+        if (!forecastResponse.ok) {
+            throw new Error('Forecast data not available: ' + forecastResponse.statusText);
+        }
+        
+        const forecastData = await forecastResponse.json();
+        
+        // Air quality data
+        const airQualityResponse = await fetch(
+            `https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${API_KEY}`
+        );
+
+        if (!airQualityResponse.ok) {
+            throw new Error('Air quality data not available: ' + airQualityResponse.statusText);
+        }
+        
+        const airQualityData = await airQualityResponse.json();
+        
+        updateWeatherUI(weatherData, forecastData, airQualityData);
+        updateBackgroundTheme(weatherData.weather[0].main);
+        addToSavedLocations(city);
+        
+        showSuccess('Weather data updated successfully');
+        
+    } catch (error) {
+        showError(error.message);
+    } finally {
+        showLoading(false);
+    }
+}
+
+        
+        function updateWeatherUI(weatherData, forecastData, airQualityData) {
+            // Update city and date
+            document.getElementById('cityName').textContent = weatherData.name;
+            document.getElementById('dateTime').textContent = new Date().toLocaleString();
+            
+            // Update current weather
+            const temp = currentUnit === 'celsius' ? weatherData.main.temp : (weatherData.main.temp * 9/5) + 32;
+            document.getElementById('temperature').textContent = `${Math.round(temp)}°${currentUnit === 'celsius' ? 'C' : 'F'}`;
+            document.getElementById('weatherDescription').textContent = weatherData.weather[0].description;
+            document.getElementById('humidity').textContent = `${weatherData.main.humidity}%`;
+            document.getElementById('windSpeed').textContent = `${(weatherData.wind.speed * 3.6).toFixed(1)} km/h`;
+            document.getElementById('pressure').textContent = `${weatherData.main.pressure} hPa`;
+            
+            // Update weather icon
+            const weatherIcon = document.getElementById('weatherIcon');
+            weatherIcon.innerHTML = getWeatherIcon(weatherData.weather[0].main);
+            weatherIcon.classList.add('animate__animated', 'animate__bounce');
+            
+            // Update forecast
+            updateForecast(forecastData);
+            
+            // Update air quality
+            updateAirQuality(airQualityData);
+            
+            // Check for extreme weather conditions
+            checkWeatherAlerts(weatherData);
+        }
+        
+        function updateForecast(forecastData) {
+            const forecastContainer = document.getElementById('forecast');
+            forecastContainer.innerHTML = '';
+            
+            const dailyForecasts = {};
+            
+            forecastData.list.forEach(forecast => {
+                const date = new Date(forecast.dt * 1000).toLocaleDateString();
+                if (!dailyForecasts[date]) {
+                    dailyForecasts[date] = forecast;
+                }
+            });
+            
+            Object.values(dailyForecasts).slice(1, 6).forEach(forecast => {
+                const date = new Date(forecast.dt * 1000);
+                const temp = currentUnit === 'celsius' ? forecast.main.temp : (forecast.main.temp * 9/5) + 32;
+                
+                const forecastCard = document.createElement('div');
+                forecastCard.className = 'forecast-card animate__animated animate__fadeIn';
+                forecastCard.innerHTML = `
+                    <div class="forecast-day">${date.toLocaleDateString('en-US', { weekday: 'short' })}</div>
+                    <div class="weather-icon">${getWeatherIcon(forecast.weather[0].main)}</div>
+                    <div>${Math.round(temp)}°${currentUnit === 'celsius' ? 'C' : 'F'}</div>
+                    <div>${forecast.weather[0].description}</div>
+                `;
+                forecastContainer.appendChild(forecastCard);
+            });
+        }
+        
+        function updateAirQuality(airQualityData) {
+            const aqi = airQualityData.list[0].main.aqi;
+            const aqiDescriptions = {
+                1: 'Good',
+                2: 'Fair',
+                3: 'Moderate',
+                4: 'Poor',
+                5: 'Very Poor'
+            };
+            
+            document.getElementById('aqiDescription').textContent = `Air Quality: ${aqiDescriptions[aqi]}`;
+            updateAQIGauge(aqi);
+        }
+        
+        function updateAQIGauge(aqi) {
+            const canvas = document.createElement('canvas');
+            canvas.width = 200;
+            canvas.height = 100;
+            const ctx = canvas.getContext('2d');
+            
+            // Gauge background
+            ctx.beginPath();
+            ctx.arc(100, 80, 60, Math.PI, 0);
+            ctx.strokeStyle = '#333';
+            ctx.lineWidth = 10;
+            ctx.stroke();
+            
+            // Gauge value
+            ctx.beginPath();
+            ctx.arc(100, 80, 60, Math.PI, Math.PI + (aqi / 5) * Math.PI);
+            ctx.strokeStyle = getAQIColor(aqi);
+            ctx.stroke();
+            
+            const gaugeContainer = document.getElementById('aqiGauge');
+            gaugeContainer.innerHTML = '';
+            gaugeContainer.appendChild(canvas);
+        }
+        
+        function getAQIColor(aqi) {
+            const colors = {
+                1: '#00e400',
+                2: '#ffff00',
+                3: '#ff7e00',
+                4: '#ff0000',
+                5: '#99004c'
+            };
+            return colors[aqi];
+        }
+        
+        function getWeatherIcon(weatherType) {
+            const icons = {
+                'Clear': '<i class="fas fa-sun"></i>',
+                'Clouds': '<i class="fas fa-cloud"></i>',
+                'Rain': '<i class="fas fa-cloud-rain"></i>',
+                'Snow': '<i class="fas fa-snowflake"></i>',
+                'Thunderstorm': '<i class="fas fa-bolt"></i>',
+                'Drizzle': '<i class="fas fa-cloud-rain"></i>',
+                'Mist': '<i class="fas fa-smog"></i>',
+                'Smoke': '<i class="fas fa-smog"></i>',
+                'Haze': '<i class="fas fa-smog"></i>',
+                'Dust': '<i class="fas fa-smog"></i>',
+                'Fog': '<i class="fas fa-smog"></i>'
+            };
+            return icons[weatherType] || '<i class="fas fa-cloud"></i>';
+        }
+        
+        function updateBackgroundTheme(weatherType) {
+            const themes = {
+                'Clear': 'linear-gradient(120deg, #283d89 0%, #fda085 100%)',
+                'Clouds': 'linear-gradient(120deg, #192888 0%, #66a6ff 100%)',
+                'Rain': 'linear-gradient(120deg, #13547a 0%, #80d0c7 100%)',
+                'Snow': 'linear-gradient(120deg, #36480f 0%, #96e6a1 100%)',
+                'Thunderstorm': 'linear-gradient(120deg, #09203f 0%, #537895 100%)',
+                'Drizzle': 'linear-gradient(120deg, #073d41 0%, #66a6ff 100%)',
+                'Mist': 'linear-gradient(120deg, #435813 0%, #96e6a1 100%)'
+            };
+            
+            document.body.style.background = themes[weatherType] || 'linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%)';
+        }
+        
+        function checkWeatherAlerts(weatherData) {
+            const alerts = [];
+            
+            if (weatherData.main.temp > 35) {
+                alerts.push('Extreme heat warning! Stay hydrated and avoid prolonged sun exposure.');
+            }
+            if (weatherData.main.temp < 0) {
+                alerts.push('Freezing conditions! Take precautions against ice and frost.');
+            }
+            if (weatherData.wind.speed > 20) {
+                alerts.push('Strong winds! Secure loose objects and exercise caution.');
+            }
+            
+            showWeatherAlert(alerts.join('\n'));
+        }
+        
+        function useCurrentLocation() {
+            if (navigator.geolocation) {
+                showLoading(true);
+                navigator.geolocation.getCurrentPosition(
+                    async position => {
+                        try {
+                            const { latitude, longitude } = position.coords;
+                            
+                            const response = await fetch(
+                                `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${API_KEY}`
+                            );
+                            
+                            if (!response.ok) throw new Error('Weather data not available');
+                            
+                            const weatherData = await response.json();
+                            document.getElementById('cityInput').value = weatherData.name;
+                            getWeather();
+                            
+                        } catch (error) {
+                            showError(error.message);
+                        } finally {
+                            showLoading(false);
+                        }
+                    },
+                    error => {
+                        showError('Unable to get your location');
+                        showLoading(false);
+                    }
+                );
+            } else {
+                showError('Geolocation is not supported by your browser');
+            }
+        }
+        
+        function addToSavedLocations(city) {
+            if (!savedLocations.includes(city)) {
+                savedLocations.push(city);
+                if (savedLocations.length > 5) {
+                    savedLocations.shift();
+                }
+                localStorage.setItem('savedLocations', JSON.stringify(savedLocations));
+                updateSavedLocations();
+            }
+        }
+        
+        function updateSavedLocations() {
+            const container = document.getElementById('savedLocations');
+            container.innerHTML = '';
+            
+            savedLocations.forEach(city => {
+                const element = document.createElement('div');
+                element.className = 'saved-location animate__animated animate__fadeIn';
+                element.innerHTML = `
+                    <span onclick="searchSavedLocation('${city}')">${city}</span>
+                    <i class="fas fa-times" onclick="removeLocation('${city}')"></i>
+                `;
+                container.appendChild(element);
+            });
+        }
+        
+        function searchSavedLocation(city) {
+            document.getElementById('cityInput').value = city;
+            getWeather();
+        }
+        
+        function removeLocation(city) {
+            savedLocations = savedLocations.filter(loc => loc !== city);
+            localStorage.setItem('savedLocations', JSON.stringify(savedLocations));
+            updateSavedLocations();
+        }
+        
+        // Temperature unit toggle
+        document.querySelectorAll('.unit-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const unit = btn.dataset.unit;
+                if (unit !== currentUnit) {
+                    currentUnit = unit;
+                    document.querySelectorAll('.unit-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    if (document.getElementById('temperature').textContent !== '--°') {
+                        getWeather();
+                    }
+                }
+            });
+        });
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            updateSavedLocations();
+            
+            // key support
+            document.getElementById('cityInput').addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') {
+                    getWeather();
+                }
+            });
+        });
