@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WeatherScope Pro</title>
+    <title>𝗪𝗘𝗔𝗧𝗛𝗘𝗥 𝗡𝗘𝗪𝗦 𝗙𝗢𝗥 𝗙𝗥𝗘𝗘 𝗕𝗬 𝗭𝗘𝗥𝗢𝗖𝗢𝗗𝗘𝗦 𝗣𝗛</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
@@ -21,14 +21,14 @@
 
         <section class="space-y-8">
             <div class="flex items-center space-x-4 justify-center">
-                <input type="text" id="cityInput" class="w-full max-w-md p-4 rounded-lg shadow-xl text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-300 transition" placeholder="Enter city name or coordinates...">
+                <input type="text" id="cityInput" class="w-full max-w-md p-4 rounded-lg shadow-xl text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-300 transition" placeholder="𝖤𝖭𝖳𝖤𝖱 𝖢𝖨𝖳𝖸/𝖢𝖮𝖴𝖭𝖳𝖱𝖸 𝖭𝖠𝖬𝖤">
                 <button class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg shadow-xl transition transform hover:scale-110" onclick="getWeather()">
-                    <i class="fas fa-search"></i> Search
+                    <i class="fas fa-search"></i> 𝗦𝗲𝗮𝗿𝗰𝗵
                 </button>
             </div>
             <div class="text-center mt-4">
                 <span class="text-gray-200 cursor-pointer hover:text-white transition" onclick="useCurrentLocation()">
-                    <i class="fas fa-location-arrow"></i> Use Current Location
+                    <i class="fas fa-location-arrow"></i> 📍 𝚄𝚂𝙴 𝙲𝚄𝚁𝚁𝙴𝙽𝚃 𝙻𝙾𝙲𝙰𝚃𝙸𝙾𝙽
                 </span>
             </div>
             <div class="saved-locations mt-6" id="savedLocations"></div>
@@ -81,20 +81,20 @@
             </div>
 
             <div class="weather-card forecast-section bg-white text-gray-800 rounded-lg p-8 shadow-xl transform transition hover:scale-105">
-                <h3 class="forecast-title text-2xl font-semibold mb-4">5-Day Forecast</h3>
+                <h3 class="forecast-title text-2xl font-semibold mb-4">5 - 𝗗𝗔𝗬 𝗙𝗢𝗥𝗘𝗖𝗔𝗦𝗧</h3>
                 <div class="forecast-grid grid grid-cols-2 md:grid-cols-3 gap-6 mt-6" id="forecast"></div>
             </div>
         </div>
 
         <div class="air-quality-section animate__animated animate__fadeIn mt-8">
-            <h3 class="text-xl font-semibold mb-4">Air Quality Index</h3>
+            <h3 class="text-xl font-semibold mb-4">𝗔𝗜𝗥 𝗤𝗨𝗔𝗟𝗜𝗧𝗬 𝗜𝗡𝗗𝗘𝗫</h3>
             <div class="aqi-gauge mt-4" id="aqiGauge"></div>
             <div id="aqiDescription">Loading air quality data...</div>
         </div>
     </div>
 
     <div class="loading-overlay fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center" id="loadingOverlay" style="display:none;">
-        <div class="loader text-white text-4xl animate__animated animate__pulse animate__infinite">Loading...</div>
+        <div class="loader text-white text-4xl animate__animated animate__pulse animate__infinite">𝗟𝗢𝗔𝗗𝗜𝗡𝗚</div>
     </div>
 
     <script src="script.js"></script>
